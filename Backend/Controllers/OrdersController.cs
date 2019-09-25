@@ -5,6 +5,7 @@ using Backend.Models;
 using Backend.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Models;
 
 namespace Backend.Controllers
 {

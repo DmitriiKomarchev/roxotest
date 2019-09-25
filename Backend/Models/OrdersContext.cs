@@ -1,5 +1,6 @@
 ﻿using Backend.Migrations;
 using Microsoft.EntityFrameworkCore;
+using Models;
 
 namespace Backend.Models
 {
