@@ -1,6 +1,7 @@
 ﻿using System;
 using Backend.Models;
 using Microsoft.EntityFrameworkCore;
+using Models;
 
 namespace Backend.Migrations
 {

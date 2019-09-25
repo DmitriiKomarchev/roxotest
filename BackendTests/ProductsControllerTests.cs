@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Moq;
 using System.Threading.Tasks;
 using FluentAssertions;
+using Models;
 using Xunit;
 
 namespace BackendTests

@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Backend.Models;
 using Microsoft.EntityFrameworkCore;
+using Models;
 
 namespace Backend.Services
 {

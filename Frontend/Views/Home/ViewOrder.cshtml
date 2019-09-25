@@ -1,0 +1,78 @@
+﻿@model OrderViewModel;
+
+@{
+    ViewData["Title"] = "View";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3" id="orders-list">
+            <table>
+                <tbody>
+                    @foreach (var order in Model.Orders)
+                    {
+                        <tr>
+                            <td>
+                                <a asp-action="ViewOrder" asp-route-id="@order.OrderId"> @order.Number</a>
+                            </td>
+                            <td>
+                                @order.Date.ToString("dd.MM.yyyy hh:mm")
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-8" id="main-data">
+            <div class="row">
+                <div id="order-data">
+                    <table>
+                        <tbody>
+                        <tr>
+                            <td>Number:</td>
+                            <td>@Model.Order.Number</td>
+                        </tr>
+                        <tr>
+                            <td>Date:</td>
+                            <td>@Model.Order.Date.ToString("dd.MM.yyyy hh:mm")</td>
+                        </tr>
+                        <tr>
+                            <td>Status:</td>
+                            <td>@Model.Order.Status</td>
+                        </tr>
+                        <tr>
+                            <td>Total:</td>
+                            <td>@Model.Order.Total</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div id="products-data">
+                    <table>
+                        <thead>
+                        <tr>
+                            <td>Product Name</td>
+                            <td>Qty</td>
+                            <td>Price</td>
+                            <td>Total</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        @foreach (var product in Model.Products)
+                        {
+                            <tr>
+                                <td>@product.ProductName</td>
+                                <td>@product.Qty</td>
+                                <td>@product.Price</td>
+                                <td>@product.Total</td>
+                            </tr>
+                        }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

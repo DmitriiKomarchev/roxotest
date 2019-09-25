@@ -1,0 +1,31 @@
+﻿@using Models
+@model OrdersViewModel;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3" id="orders-list">
+            <table>
+                <tbody>
+                    @foreach (var order in Model.Orders)
+                    {
+                        <tr>
+                            <td>
+                                <a asp-action="ViewOrder" asp-route-id="@order.OrderId">@order.Number</a>
+                            </td>
+                            <td>
+                                @order.Date.ToString("dd.MM.yyyy hh:mm")
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-9" id="main-data">
+
+        </div>
+    </div>
+</div>

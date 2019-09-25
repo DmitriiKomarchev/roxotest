@@ -1,8 +1,7 @@
 ﻿using System.Threading.Tasks;
-using Backend.Models;
 using Models;
 
-namespace Backend.Services
+namespace Frontend.Services
 {
     public interface IOrdersService
     {
